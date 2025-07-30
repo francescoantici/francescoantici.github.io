@@ -100,6 +100,13 @@
             margin: auto;
         }
 
+        /* On mobile: Stack in a column */
+        @media (max-width: 768px) {
+            .bio-container {
+                flex-direction: column;
+            }
+        }
+
         .bio-container img {
             width: 250px;
             height: 250px;
@@ -392,13 +399,13 @@
                     </div>
                     <div class="contact-item">
                         <span><img src="assets/github_icon.png" alt="Linkedin" width="30" height="30"></span>
-                        <span><a href="https://francescoantici.github.io"
-                                style="color: inherit; text-decoration: none;">GitHub</a></span>
+                        <span><a href="https://francescoantici.github.io" style="color: inherit; text-decoration: none;"
+                                target="_blank">GitHub</a></span>
                     </div>
                     <div class="contact-item">
                         <span><img src="assets/linkedin_icon.png" alt="Linkedin" width="30" height="30"></span>
                         <span><a href="https://www.linkedin.com/in/francesco-antici-0b71ab1bb/"
-                                style="color: inherit; text-decoration: none;">Linkedin</a></span>
+                                style="color: inherit; text-decoration: none;" target="_blank">Linkedin</a></span>
                     </div>
                 </div>
             </div>
@@ -410,9 +417,24 @@
                     <div class="bio-container">
                         <div class="bio-text">
                             <p>
-                                Francesco Antici is a researcher in Artificial Intelligence (AI) and high-performance computing (HPC), holding a Ph.D. in "Computer Science and Engineering", obtained at University of Bologna. 
-                                His research interests span from Natural Language Processing (NLP) and Artificial Intelligence (AI) to High-Performance Computing (HPC), with specific focus on the intersection of Artificial Intelligence (AI) and high-performance computing (HPC). His work on applying AI techniques (e.g. Large Language Models (LLMs), Deep/Machine Learning (DL/ML) and Generative Models), to the overall optimization of HPC environments, has been published in relevant peer-reviewed conferences (like IJCAI, ISC and Supercomputing) and journals (Scientific Data@Nature and Future Generation Computer Systems). During his carrer he has contributed to several research projects and initiatives, such as Regale, Exadigit, and SEANERGY, and he worked abroad for leading research institutions around the world, such as the Riken Center for Computational Science, in Japan, the University of Tennesse Knoxville, in the U.S.A., and the University of Bologna, in Italy.
-                                During the years he also worked as an AI Engineer and data analyst, integrating AI solutions into existing ecosystems, web and mobile applications, and developing tools for predictive modeling, data analysis and visualization.
+                                Francesco Antici is a researcher in Artificial Intelligence (AI) and high-performance
+                                computing (HPC), holding a Ph.D. in "Computer Science and Engineering", obtained at
+                                University of Bologna.
+                                His research interests span from Natural Language Processing (NLP) and Artificial
+                                Intelligence (AI) to High-Performance Computing (HPC), with specific focus on the
+                                intersection of Artificial Intelligence (AI) and high-performance computing (HPC). His
+                                work on applying AI techniques (e.g. Large Language Models (LLMs), Deep/Machine Learning
+                                (DL/ML) and Generative Models), to the overall optimization of HPC environments, has
+                                been published in relevant peer-reviewed conferences (like IJCAI, ISC and
+                                Supercomputing) and journals (Scientific Data@Nature and Future Generation Computer
+                                Systems). During his carrer he has contributed to several research projects and
+                                initiatives, such as Regale, Exadigit, and SEANERGY, and he worked abroad for leading
+                                research institutions around the world, such as the Riken Center for Computational
+                                Science, in Japan, the University of Tennesse Knoxville, in the U.S.A., and the
+                                University of Bologna, in Italy.
+                                During the years he also worked as an AI Engineer and data analyst, integrating AI
+                                solutions into existing ecosystems, web and mobile applications, and developing tools
+                                for predictive modeling, data analysis and visualization.
                             </p>
                         </div>
                         <img src="assets/foto_utk.jpeg" alt="Profile Picture">
@@ -665,6 +687,7 @@
                 ahref.href = `${entry.fields.url || '#'}`;
                 ahref.style.textDecoration = "none";
                 ahref.style.margin = "0px";
+                ahref.target = "_blank"; // Open in new tab
                 const div = document.createElement("div");
                 div.className = "publication-item";
                 div.innerHTML = `
